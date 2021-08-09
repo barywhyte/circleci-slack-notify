@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run: npm tes
+      - run: npm test
       - slack/notify:
           channel: circleci-demo
           event: pass
@@ -29,4 +29,4 @@ workflows:
   build-and-notify:
     jobs:
       - build-test-and-notify:
-          context: notify-slack
+          context: notify-sla
