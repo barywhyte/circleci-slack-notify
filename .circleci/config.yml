@@ -13,6 +13,7 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
+
       - run: npm test
       - slack/notify:
           channel: circleci-demo
@@ -23,7 +24,7 @@ jobs:
           channel: circleci-demo
           event: pass
           mentions: '@Seun'
-          template: success_tagged_deploy_1
+          template: basic_success_1
 
 workflows:
   build-and-notify:
