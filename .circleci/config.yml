@@ -16,12 +16,12 @@ jobs:
 
       - run: npm test
       - slack/notify:
-          channel: circleci-demo
+          channel: seun_cci_notify
           event: fail
           template: basic_fail_1
 
       - slack/notify:
-          channel: circleci-demo
+          channel: seun_cci_notify
           event: pass
           mentions: '@Seun'
           template: basic_success_1
@@ -30,6 +30,6 @@ workflows:
   build-and-notify:
     jobs:
       - build-test-and-notify:
-          context: notify-slack
+          context: SEUN_CCI_NOTIFY
 
-          
+
