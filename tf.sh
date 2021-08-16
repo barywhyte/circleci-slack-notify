@@ -1,6 +1,4 @@
 #!/bin/bash
 echo "Changes found";
 
-   curl -X POST -H 'Content-type: application/json' --data "{'text':'Hello world'}" ${SLACK_WEBHOOK_URL}
-   #echo $MESSAGE
-esac
+curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
